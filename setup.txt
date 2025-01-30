@@ -1,0 +1,92 @@
+
+# Inventory App 
+
+This guide provides instructions to set up and run both the **frontend** (built with Flutter) and **backend** (built with NestJS) for the Inventory App.
+
+
+### 1. **Backend Setup (`inventory-api`)**
+
+#### a. **Navigate to the Backend Folder**
+
+Once you've cloned the repository, move into the backend folder:
+
+```bash
+cd inventory-api
+```
+
+#### b. **Install Backend Dependencies**
+
+Run the following command to install the required dependencies for the backend:
+
+```bash
+npm install
+```
+
+#### c. **Start the Backend Server**
+
+To start the backend server, use the following command:
+
+```bash
+npm run start
+```
+
+Alternatively, if you have the NestJS CLI installed, you can also run:
+
+```bash
+nest start
+```
+
+#### d. **Verify the Backend is Running**
+
+Ensure that the backend API is running by opening your browser or using Postman and navigating to:
+
+```
+http://localhost:4000
+```
+
+You should see the default NestJS response or your API's specific response.
+
+---
+
+### 2. **Frontend Setup (`inventory_app`)**
+
+#### a. **Navigate to the Frontend Folder**
+
+After the backend is set up and running, move into the frontend folder:
+
+```bash
+cd ../inventory_app
+```
+
+#### b. **Install Frontend Dependencies**
+
+Install the Flutter dependencies by running:
+
+```bash
+flutter pub get
+```
+
+#### c. **Run the Frontend Application**
+
+To run the Flutter app on a connected device or emulator, use the following command:
+
+```bash
+flutter run
+```
+
+This will launch the app on the connected device or emulator.
+
+#### d. **Verify the Frontend is Running**
+
+Once the frontend app is launched, it should be able to make requests to the backend API at `http://localhost:3000`.
+
+---
+
+### 3. **Additional Notes**
+
+- Make sure all dependencies for both frontend and backend are installed before running the applications.
+- If you are running both frontend and backend on different machines, update the backend API URL in the frontend app to point to the correct backend URL.
+- If you face any issues with the setup or running the applications, check that the required tools (Node.js, npm, Flutter SDK, Dart SDK) are correctly installed.
+
+---
+
