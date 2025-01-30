@@ -1,0 +1,32 @@
+
+1. **Bagaimana cara Anda menentukan arsitektur terbaik untuk sebuah aplikasi Flutter? Misalnya, kapan Anda akan memilih menggunakan arsitektur seperti MVVM atau Clean Architecture?**
+
+   Pemilihan arsitektur terbaik tergantung pada ukuran dan kompleksitas aplikasi. Untuk aplikasi kecil hingga menengah, MVVM (Model-View-ViewModel) seringkali cukup karena memisahkan logika bisnis dan UI dengan jelas, membuat kode lebih terstruktur. Namun, untuk aplikasi yang lebih besar, Clean Architecture lebih disarankan karena memberikan pembagian yang lebih jelas antara layer dan lebih mudah di-scale, maintain, dan test. Clean Architecture juga memisahkan kode menjadi beberapa lapisan, seperti presentation, domain, dan data layer, yang membuat aplikasi lebih mudah dipahami dan diuji.
+
+2. **Bagaimana pendekatan Anda dalam memberikan code review kepada developer junior untuk memastikan kualitas kode mereka meningkat tanpa membuat mereka merasa dikritik?**
+
+   Pendekatan saya adalah memberikan feedback yang konstruktif dan membimbing mereka dalam memahami prinsip atau alasan di balik perubahan yang saya sarankan. Alih-alih hanya menunjukkan apa yang salah, saya lebih fokus pada mengedukasi dan memberikan alternatif solusi yang lebih baik. Saya juga memuji aspek positif dari kode mereka agar mereka tetap termotivasi dan merasa dihargai. Ini membantu mereka melihat code review sebagai kesempatan untuk berkembang, bukan sebagai kritik.
+
+3. **Ceritakan tentang pengalaman Anda menyelesaikan bug atau masalah teknis yang kompleks dalam proyek Flutter. Bagaimana Anda mengidentifikasi dan menyelesaikan masalah tersebut?**
+
+   Pada salah satu proyek, saya menghadapi masalah di mana aplikasi Flutter mengalami crash secara acak saat mengakses API. Setelah memeriksa log, saya menyadari bahwa ada masalah pada pengelolaan state dan ketidaksesuaian antara data yang diambil dan UI. Saya kemudian menambahkan mekanisme logging untuk melacak perubahan state dan menemukan bahwa data yang diterima tidak sesuai dengan ekspektasi. Setelah mengidentifikasi akar masalah, saya memperbaiki alur pengambilan data dan menambahkan validasi untuk memastikan data yang diterima sesuai dengan yang diharapkan.
+
+4. **Dalam aplikasi berskala besar, bagaimana Anda mengelola state management? Mengapa Anda memilih pendekatan tersebut (misalnya GetX, Provider, Riverpod, atau BLoC)?**
+
+   Dalam aplikasi berskala besar, saya memilih menggunakan **GetX** untuk state management karena kemudahan penggunaannya dan kemampuan reaktifnya. GetX memungkinkan untuk mengelola state dengan sedikit boilerplate code, serta menyediakan kemampuan untuk melakukan dependency injection dan navigasi secara efisien. Saya juga menyukai kemampuannya untuk mengelola controller secara sederhana tanpa memerlukan pengaturan kompleks. GetX sangat cocok untuk aplikasi besar yang membutuhkan performa tinggi dengan kontrol penuh atas state dan UI.
+
+5. **Apa standar atau prinsip yang Anda terapkan untuk memastikan kualitas kode dalam proyek Flutter? Bagaimana Anda memastikan bahwa kode tetap terstruktur dengan baik saat tim bertambah besar?**
+
+   Saya selalu mengikuti prinsip SOLID untuk memastikan bahwa kode tetap modular dan mudah dipelihara. Selain itu, saya mendorong penggunaan design patterns yang sesuai dan mendokumentasikan kode dengan baik agar mudah dipahami. Untuk memastikan struktur kode yang baik saat tim berkembang, saya memperkenalkan penggunaan linters dan formatters, serta menyarankan penggunaan arsitektur yang jelas seperti Clean Architecture atau MVVM. Kode harus mudah di-scalable dan teruji, dan setiap anggota tim diharapkan untuk mengikuti pedoman yang telah disepakati bersama.
+
+6. **Ketika Anda diminta untuk memperkirakan waktu pengerjaan fitur atau modul tertentu, bagaimana Anda memastikan estimasi yang Anda berikan realistis dan akurat?**
+
+   Saya memastikan estimasi realistis dengan terlebih dahulu memecah fitur atau modul tersebut menjadi tugas-tugas yang lebih kecil dan lebih terukur. Saya juga mengidentifikasi potensi risiko dan ketidakpastian yang dapat mempengaruhi timeline, seperti ketergantungan terhadap tim lain atau kebutuhan teknologi baru. Estimasi yang saya buat juga berdasarkan pengalaman saya dalam mengerjakan fitur serupa sebelumnya. Untuk meningkatkan akurasi, saya juga mempertimbangkan feedback dari tim untuk memastikan estimasi tersebut mencakup semua aspek yang diperlukan.
+
+7. **Dalam kasus di mana tim non-teknis (seperti Product Manager) meminta fitur yang tidak feasible secara teknis, bagaimana cara Anda menjelaskan batasan teknis tersebut sambil memberikan alternatif solusi?**
+
+   Saya akan menjelaskan batasan teknis dengan cara yang mudah dipahami, menggunakan analogi yang sesuai dengan konteks mereka. Misalnya, jika ada keterbatasan pada platform atau masalah kinerja, saya akan menjelaskan mengapa hal tersebut bisa menghambat pengalaman pengguna. Saya juga akan memberikan alternatif solusi yang lebih feasible, menjelaskan bagaimana hal tersebut dapat memenuhi tujuan produk dengan cara yang lebih efektif dan efisien. Hal ini memungkinkan tim non-teknis untuk memahami perspektif teknis tanpa merasa terbebani.
+
+8. **Flutter terus berkembang dengan fitur-fitur baru. Bagaimana cara Anda mengikuti perkembangan teknologi Flutter dan memutuskan kapan teknologi baru tersebut dapat diterapkan di proyek Anda?**
+
+   Saya mengikuti perkembangan teknologi Flutter melalui blog resmi, changelog, dan forum komunitas seperti Stack Overflow dan Reddit. Saya juga mengikuti konferensi dan webinar Flutter untuk mendapatkan wawasan tentang tren terbaru. Ketika ada fitur baru yang dapat meningkatkan performa atau pengalaman pengguna, saya akan melakukan evaluasi terlebih dahulu untuk memastikan bahwa penerapan fitur tersebut tidak akan mengganggu kestabilan aplikasi. Selain itu, saya mempertimbangkan biaya dan manfaat implementasi fitur baru, memastikan bahwa fitur tersebut relevan dengan kebutuhan proyek sebelum memutuskan untuk mengimplementasikannya.
